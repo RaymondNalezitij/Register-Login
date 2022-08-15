@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<style>
+    {% include "./Shared/Styles/reset.css" %}
+    {% include "./Shared/Styles/fonts.css" %}
+    {% include "./Models/Register/RegisterAndLogin.css" %}
+</style>
+
+{% include "./Shared/head.twig" %}
+
+<body>
+
+<div class="container">
+    <h2>Log in</h2>
+    <form class="form" method="post" action="/login">
+        <label>
+            <input class="textBox" name="email" placeholder="Email" maxlength="500">
+        </label>
+        <label>
+            <input type="password" class="textBox" name="password" placeholder="Password" maxlength="200">
+        </label>
+        <button class="button-85" type="submit">Log in</button>
+    </form>
+</div>
+<a href="/register">
+    <p>Register</p>
+</a>
+
+
+</body>
+
+</html>

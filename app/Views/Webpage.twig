@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<style>
+    {% include "./Shared/Styles/reset.css" %}
+    {% include "./Shared/Styles/fonts.css" %}
+    {% include "./Models/Register/RegisterAndLogin.css" %}
+</style>
+
+{% include "./Shared/head.twig" %}
+
+<body>
+
+<div class="container">
+    <h2>Welcome {{ username }}!</h2>
+    <form class="form" method="post" action="/">
+        <button class="button-85" type="submit">Logout</button>
+    </form>
+    </form>
+</div>
+
+</body>
+
+</html>

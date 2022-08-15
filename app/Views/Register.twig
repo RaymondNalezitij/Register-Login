@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<style>
+    {% include "./Shared/Styles/reset.css" %}
+    {% include "./Shared/Styles/fonts.css" %}
+    {% include "./Models/Register/RegisterAndLogin.css" %}
+</style>
+
+{% include "./Shared/head.twig" %}
+
+<body>
+
+<div class="container">
+    <h2>Registration</h2>
+    <form class="form" method="post" action="/register">
+        <label>
+            <input class="textBox" name="username" placeholder="Username" maxlength="200">
+            {% if errors.username %}
+                <span>{{ errors.username }}</span>
+            {% endif %}
+        </label>
+        <label>
+            <input class="textBox" name="email" placeholder="Email" maxlength="500">
+            {% if errors.email %}
+                <span>{{ errors.email }}</span>
+            {% endif %}
+        </label>
+        <label>
+            <input type="password" class="textBox" name="password" placeholder="Password" maxlength="200">
+            {% if errors.password %}
+                <span>{{ errors.password }}</span>
+            {% endif %}
+        </label>
+        <label>
+            <input type="password" class="textBox" name="confirmPassword" placeholder="Confirm password"
+                   maxlength="200">
+            {% if errors.confirmPassword %}
+                <span>password confirmation must equal password</span>
+            {% endif %}
+        </label>
+        <button class="button-85" type="submit">Register</button>
+    </form>
+</div>
+<a href="/login">
+    <p>Back to login</p>
+</a>
+
+</body>
+
+</html>
